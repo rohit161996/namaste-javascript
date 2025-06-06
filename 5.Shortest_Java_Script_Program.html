@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Java Script Program</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Summary
+    // 1. Shortest Program in JS: Empty file. Still, browsers creates global 
+    // EC and global space along with Window object. Window is a global object,
+    // created by the Java Script Engine.
+
+    // 2. Global Space: Anything that is not in a function, is in the global 
+    // space.
+    var a = 10; // Global Variable
+
+    // 3. Variables present in a global space can be accessed by a "window"
+    // object. E.g. window.a
+    
+    // 4. Window object has several functions defined in it like alert() etc
+    // which can be used throughout the program.
+    function b(){
+        var x = 10; // Local Variable
+    }
+ 
+    // 5. this keyword is created which points to the window object, 
+    // (this === window) object.
+
+    console.log(window.a);
+    console.log(this.a);
+    console.log(x); // Access Denied due to global variable.
+</script>
+
+</html>
