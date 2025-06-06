@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined vs Not Defined</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Scope is a place where we can access our function or variable
+    function a() {
+        // Scope of this b() is the function a()
+        // and the global scope(Parent)[Lexical Environment].
+        function b() {
+            // Scope of this console.log is the function b()
+            // and the a() -> Parent[Lexical Environment].
+            console.log(b);
+        }
+    }
+    var b = 10;
+    a();
+</script>
+
+</html>

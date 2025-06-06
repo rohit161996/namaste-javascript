@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined vs Not Defined</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function a() {
+        // Scope of this console.log is the function a()
+        // and the global scope -> Parent[Lexical Environment].
+        console.log("One" + b);
+
+        function c() {
+            // Scope of this console.log is the function c()
+            // and the a() -> Parent[Lexical Environment].
+            console.log("Two" + b);
+        }
+    }
+    var b = 10;
+
+    a();
+
+    console.log(b);
+
+    // Whenever execution context is created a lexical environment is created.
+    // Lexical Environment = Local Memory + [Lexical Environment of Parent]
+    // Lexical = Hierarchy/Sequence
+    // Scope of the variable in a function or lexical environment is the access 
+    // to its lexical environment and parent's lexical environment.
+</script>
+
+</html>
