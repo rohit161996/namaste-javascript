@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execution Context</title>
+</head>
+
+<body>
+    <h1>Namaste Javascript ❤️</h1>
+</body>
+
+<script>
+    // 1. Javascript is a synchronous single threaded language.
+    // 2. Asynchronous operations can be performed using the 
+    //    callback function like setTimeout().
+
+    // The function and variable is created before execution of program 
+    // with undefined value and function definition itself.
+
+    // Execution Context is created before the execution of the program.
+    var a = 10;
+    function execute() {
+        var num = a + 10;
+        console.log(num);
+    }
+
+    // Now the variable is assigned value = 10
+    // and function is written in the memory
+    console.log(a);
+    console.log(execute());
+</script>
+
+</html>
