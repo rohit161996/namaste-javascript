@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let and const</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Hoisiting is accessing the value in the variable or function before 
+    // even initializing the variable or function.
+
+    // 1. var variable is filled with undefined if its value is printed 
+    // before initializing and the variable's value is defined later.
+
+    // 2. If var variable's value is not defined altogether it will give
+    // Uncaught Reference Error : Not Defined.
+
+    // 3. If the value of let/const variable is printed before initialization
+    // and then it will give Reference Error due to Temporal Dead Zone.
+
+    // 4. It is not necessary to initialize the let variable, but it is necessary
+    // to initialize the const variable.
+    let xy;
+    xy = 2000;
+    console.log(xy); // 2000
+
+    // const z; // Error
+    // z = 100; // Error
+
+    // 5. let and const variable cannot be redeclared.
+    let ro = 100;
+    // let ro = 100; // error
+
+    const roh = 1000;
+    // const roh = 10; // error
+
+    // 6. let, const and var variables are hoisted.
+    let a = 10;
+    console.log(a); // 10
+
+    console.log(b); // 100
+    console.log(window.b); // 100
+    console.log(this.b); // 100
+    var b = 100;
+
+    console.log(d); // Reference Error : Cannot access before Initialization : TEMPORAL DEAD ZONE of d
+    let d = 10;
+
+    console.log(e); // Reference Error : Cannot access before Initialization : TEMPORAL DEAD ZONE of e
+    const e = 10;
+
+    // Since var is created in global space and can be accessed through window object.
+    // let and const are created in local space and cannot be accessed before initialization.
+    
+    /* -------------------- TEMPORAL DEAD ZONE OF x--------------- */
+    /* -------------------- TEMPORAL DEAD ZONE OF x--------------- */
+    /* -------------------- TEMPORAL DEAD ZONE OF x--------------- */
+    console.log(x);  // Reference Error : Cannot access before Initialization
+    /* -------------------- TEMPORAL DEAD ZONE OF x--------------- */
+    /* -------------------- TEMPORAL DEAD ZONE OF x--------------- */
+    /* -------------------- TEMPORAL DEAD ZONE OF x--------------- */
+    const x = 100;
+
+    // Reference Error vs Syntax Error vs Type Error
+    // 1. Reference Error :-
+    // - Not defined var variable.
+    // - Temporal Dead Zone of let and const.
+
+    // 2. Syntax Error :-
+    // - Missing Identifier of const variable like const b;
+    // - Redeclaration of a let and const variable.
+
+    // 3. Type Error :-
+    // - const xyz = 100;
+    // - xyz = 200;
+
+
+    // Best Practises :-
+    // - Always use const variable.
+    // - Declare variable on top to avoid Temporal Dead Zone.
+    
+
+</script>
+
+</html>
