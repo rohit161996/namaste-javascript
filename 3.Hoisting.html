@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    // Hoisiting is accessing the value in the variable or function before 
+    // even initializing the variable or function.
+
+    // 1. var variable is filled with undefined if its value is printed 
+    // before initializing and the variable's value is defined later.
+
+    // 2. If var variable's value is not defined altogether it will give
+    // Uncaught Reference Error : Not Defined.
+
+    // 3. If the value of let/const variable is printed before initialization
+    // and then it will give Reference Error due to Temporal Dead Zone.
+
+    // 4. It is not necessary to initialize the let variable, but it is necessary
+    // to initialize the const variable.
+
+    // 5. let and const variable cannot be redeclared.
+
+    // 6. let, const and var variables are hoisted.
+
+    console.log(x); // undefined value
+    console.log(getName); // prints the function
+
+    var x = 7;
+
+    function getName() {
+        console.log("Namaste Javascript");
+    }
+
+    getName(); // Namaste Javascript
+ 
+    console.log(x); // 7 
+    console.log(getName); // prints the function
+
+
+    console.log(getName1); // undefined
+    var getName1 = ()=>{
+        console.log("Namaste Javascript");
+    }
+
+</script>
+
+</html>
