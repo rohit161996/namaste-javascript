@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Javascript Code is Executed?</title>
+</head>
+
+<body>
+    <h1>Namaste Javascript ❤️❤️❤️</h1>
+</body>
+<script>
+    // Execution Context is created even before the execution of the program.
+    // It is called the Global Execution Context.
+    // With undefined var variables.
+
+    // Execution context has two component:-
+    // 1) Memory component [Variable Environment] 
+    // -This is the place where all variables and functions are stored as key 
+    // value pairs. eg-{key: value ||  n:2;} 
+
+    // 2) Code Component[Thread of Execution]
+    // -This is the place where code is executed one line at a time
+
+    // ------------------------------------------------------------------------
+
+    // With every function invoked an Execution Context is created.
+    // After the function executes and returns the Execution Context is deleted.
+    // The Global Execution Context is also destroyed.
+
+    // ------------------------------------------------------------------------
+
+
+    // "undefined" it is a keyword which is assigned to variables during 
+    // the memory allocation phase
+
+    // -------------------------------------------------------------------------
+
+    // Call Stack 
+    // It traces the Javascript program, like how it is being executed.
+    // It maintains the order of execution of execution contexts.
+    // Also Known as 
+    // 1. Execution Context Stack
+    // 2. Program Stack.
+    // 3. Control Stack.
+    // 4. Runtime Stack.
+    // 5. Machine Stack.
+    
+    var n = 2;
+
+    function square(num) {
+        var ans = num * num;
+        return ans;
+    }
+
+    var square2 = square(n);
+
+    var square4 = square(4);
+
+    console.log(square2);
+</script>
+
+</html>
