@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const arr = [3, 6, 9, 12, 24];
+
+    const double = (val) => {
+        return (2 * val);
+    }
+
+    const triple = (val) => {
+        return 3 * val;
+    }
+
+    const binary = (val) => {
+        return val.toString(2);
+    }
+
+    Array.prototype.calculate = function(logic){
+        const output = [];
+        for (let i = 0; i < this.length; i++) {
+            output.push(logic(this[i]));
+        }
+        return output;
+    };
+
+    const double_arr = arr.calculate(double);
+    const triple_arr = arr.calculate(triple);
+    const binary_arr = arr.calculate(binary);
+
+    console.log(arr);
+    console.log(double_arr);
+    console.log(triple_arr);
+    console.log(binary_arr);
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust Issues With Timeout</title>
+</head>
+<body>
+    
+</body>
+<script>
+    console.log("start");
+
+    setTimeout(function cb(){
+        console.log("callback function");
+    });
+
+    console.log("end");
+
+    // Block the main thread for 10 seconds
+    let startDate = new Date().getTime();
+    let endDate = startDate;
+
+    while(endDate < startDate + 10000){
+        endDate = new Date().getTime();
+    }
+
+    console.log("While expires");
+</script>
+</html>

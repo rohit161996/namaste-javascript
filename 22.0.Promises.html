@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const cart = ["shoes", "pants", "kurta"];
+
+    // Below two functions are asynchronous and dependent on each other
+    const orderId = createOrder(cart);
+    proceedToPayment(orderId);
+
+    // with Callback (Before Promise)
+    // Below here, it is the responsibility of createOrder function to first create the order then call the callback function
+    createOrder(cart, function () {
+        proceedToPayment(orderId);
+    });
+    // Above there is the issue of `Inversion of Control`
+
+
+
+    const cart1 = ["shoes", "pants", "kurta"];
+
+    const promiseRef = createOrder(cart1);
+    // this promiseRef has access to `then`
+
+    // {data: undefined}
+    // Initially it will be undefined so below code won't trigger
+    // After some time, when execution has finished and promiseRef has the data then automatically the below line will get triggered.
+
+    promiseRef.then(function () {
+        proceedToPayment(orderId);
+    });
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined vs Not Defined</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var c = 100;
+    
+    function x(){
+        var c = 30;
+        console.log(window.c); // 100
+        console.log(c); // 30
+        window.c = 20;
+    }
+
+    x();
+    console.log(c);
+</script>
+</html>

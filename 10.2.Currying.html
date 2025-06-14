@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currying</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var x = 100;
+    var y = 100;
+    var z = 100;
+    function a(){
+        return(function b(){
+            return( function c(){
+                console.log(x + y + z);
+            });
+        });
+    }
+    a()()();
+</script>
+</html>

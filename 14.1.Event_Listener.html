@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event</title>
+</head>
+
+<body>
+    <button id="clickMe">Click Me!</button>
+</body>
+<script>
+    var count = 0;
+    document.getElementById("clickMe")
+        .addEventListener("click", function () {
+            console.log("Button Clicked " + ++count);
+        })    
+</script>
+
+</html>

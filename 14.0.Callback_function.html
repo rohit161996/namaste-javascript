@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    
+</body>
+<script>
+    setTimeout(function(){
+        console.log("Timer");
+    }, 5000);
+
+    // Higher order function(callback function(){})
+    function x(y){
+        y();
+        console.log("x");
+    }
+
+    // function call
+    x(function y(){
+        console.log("y");
+    })
+</script>
+</html>

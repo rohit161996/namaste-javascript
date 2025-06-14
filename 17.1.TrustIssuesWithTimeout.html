@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust Issues With Timeout</title>
+</head>
+<body>
+    
+</body>
+<script>
+    console.log("start");
+
+    // It will be executed afterwards even though the timer = 0
+    setTimeout(function cb(){
+        console.log("callback function");
+    }, 0);
+
+    console.log("While expires");
+</script>
+</html>

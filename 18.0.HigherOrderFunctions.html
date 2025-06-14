@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Without Functional Programming</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const radius = [2, 1, 3, 4];
+    // Calculate Area
+    const  calculateArea = function(radius) {
+        const output = [];
+        for (let i = 0; i < radius.length; i++) {
+            output.push(Math.PI * radius[i] * radius[i]);
+        }
+        return output;
+    }
+    console.log(calculateArea(radius));
+
+    // Calculate Perimeter
+    const  calculatePerimeter = function(radius) {
+        const output = [];
+        for (let i = 0; i < radius.length; i++) {
+            output.push(2 * radius[i] * Math.PI);
+        }
+        return output;
+    }
+    console.log(calculatePerimeter(radius));
+
+    // Calculate Diameter
+    const  calculateDiameter = function(radius) {
+        const output = [];
+        for (let i = 0; i < radius.length; i++) {
+            output.push(2 * radius[i]);
+        }
+        return output;
+    }
+    console.log(calculateDiameter(radius));
+
+    const calculate = function(){
+        
+    }
+
+</script>
+
+</html>

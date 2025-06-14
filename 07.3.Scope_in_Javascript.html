@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clearing Doubt on Scope</title>
+</head>
+
+<body>
+</body>
+<script>
+    let z = 1000;
+    function print(){
+        var b = 10;
+        console.log(z);
+    }
+    {
+        var c = 100;
+        console.log(z); // 1000
+    }
+    print(); // 1000
+    console.log(c); // 100
+    console.log(b); // Reference Error : Not Defined
+</script>
+</html>

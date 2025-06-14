@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyfill on Reduce</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const nums = [1, 2, 3, 4, 5, 6];
+    // Using reduce
+    const output = nums.reduce((accumulator, current) => {
+        // finding the maximum among the array
+        if (accumulator < current) {
+            accumulator = current;
+        }
+        return accumulator;
+    }, nums[0]);
+
+    // Polyfill for reduce
+    Array.prototype.findMax = function (logic, initialvalue) {
+        let accumulator = initialvalue;
+        for (let i = 0; i < this.length; i++) {
+            // accumulator = accumulator ? logic(accumulator, this[i]) : this[i];
+            if(logic(accumulator, this[i])){
+                accumulator = logic(accumulator, this[i]);
+            }
+            else{
+                accumulator = this[i];
+            }
+        }
+        return accumulator;
+    }
+    const output2 = nums.findMax(function (accumulator, current) {
+        // finding the maximum among the array
+        if (accumulator < current) {
+            accumulator = current;
+        }
+        return accumulator;
+    }, nums[0]);
+
+    console.log(output)
+    console.log(output2)
+
+</script>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function x(){
+        var i = 1000;
+        setTimeout(function(){
+            // The function attaches a closure to the variable i
+            console.log(i);
+        }, 3000);
+        console.log("Namaste Javascript");
+    }
+    x();
+</script>
+</html>

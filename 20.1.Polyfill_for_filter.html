@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyfill on Filter</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const nums = [1, 2, 3, 4, 5, 6];
+    // Using filter
+    const output = nums.filter((res) => res % 2);
+
+    // Polyfill for filter
+    Array.prototype.removeEven = function (logic) {
+        const ans = [];
+        for (let i = 0; i < this.length; i++) {
+            if (logic(this[i])) {
+                ans.push(this[i]);
+            }
+        }
+        return ans;
+    }
+    const output2 = nums.removeEven((res) => res % 2);
+
+    console.log(output)
+    console.log(output2)
+
+</script>
+
+</html>

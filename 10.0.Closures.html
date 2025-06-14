@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function x(){
+        var a = 7;
+        function y(){
+            console.log(a);
+        }
+        return y;
+    }
+    x()(); // 7
+    var z = x(); 
+    console.log(z); // prints function
+    z(); // 7
+</script>
+</html>

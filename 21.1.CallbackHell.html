@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Hell</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const cart = ["shoes", "pants", "kurta"];
+    // Two steps to place a order
+    // 1. Create a Order
+    // 2. Proceed to Payment
+
+    // It could look something like this:
+    api.createOrder();
+    api.proceedToPayment();
+
+    // Scenario
+    api.createOrder(cart, function () {
+        api.proceedToPayment();
+    });
+
+    api.createOrder(cart, function () {
+        api.proceedToPayment(function () {
+            api.showOrderSummary();
+        });
+    });
+
+    api.createOrder(cart, function () {
+        api.proceedToPayment(function () {
+            api.showOrderSummary(function () {
+                api.updateWallet();
+            });
+        });
+    });
+    // 💡 Callback Hell
+</script>
+
+</html>

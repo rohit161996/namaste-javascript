@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function l() {
+        var a = 200;
+        function y() {
+            console.log(a);
+        }
+        a = 100;
+        return y;
+    }
+    l()(); // 100, since y points to the reference of a, and does not points to 7
+
+</script>
+
+</html>

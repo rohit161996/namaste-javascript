@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Mast Example</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const users = [
+        {firstName : "Akshay", lastName: "Saini", age: 26},
+        {firstName : "Donald", lastName: "Trump", age: 75},
+        {firstName : "Elon", lastName: "Musk", age: 50},
+        {firstName : "Rohit", lastName: "Ramchandani", age: 23}
+    ];
+
+    // Ye hai aam zindagi
+    const output = users.map(function fetcher(res){
+        return (res.firstName + " " + res.lastName);
+    })
+    console.log(output)
+
+    // Ye hai mentos zindagi
+    const output2 = users.map((x) => x.firstName + " " + x.lastName);
+    console.log(output2);
+    
+</script>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLosure</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function outest() {
+
+        function outer(b) {
+
+            function inner() {
+                console.log(a, b);
+            }
+
+            var a = 10;
+
+            return inner;
+        }
+        return outer;
+    }
+
+    // Shadowing
+    let a = 100;
+    
+    var close = outest()("Hello Rohit");
+    close();
+</script>
+
+</html>

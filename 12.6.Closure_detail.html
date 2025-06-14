@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLosure</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function count() {
+        var counter = 0;
+        function incrementCount() {
+            counter++;
+            console.log(counter);
+        }
+        return incrementCount;
+    }
+
+    var close = count();
+    close();
+    close();
+    
+    var close2 = count();
+    close2();
+    close2();
+</script>
+
+</html>
